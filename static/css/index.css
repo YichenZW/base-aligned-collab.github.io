@@ -150,3 +150,21 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+/* Reduce base font size and scale down publication headings/authors */
+body {
+  font-size: 14px;
+}
+
+.title.is-1.publication-title {
+  font-size: 2.2rem;
+  line-height: 1.05;
+}
+
+.title.is-3 {
+  font-size: 1.25rem;
+}
+
+.publication-authors {
+  font-size: 0.95rem;
+}

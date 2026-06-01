@@ -86,8 +86,8 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Optimizing Diversity and Quality through Base-Aligned Model
-              Collaboration</h1>
+            <h2 class="title is-1 publication-title">Optimizing Diversity and Quality through Base-Aligned Model
+              Collaboration</h2>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://yichenzw.github.io">Yichen Wang</a><sup>1*</sup>,</span>
@@ -114,6 +114,10 @@
             </div>
             <div class="is-size-6 publication-authors">
               <span class="author-block"><sup>*</sup>Equal Contribution</span>
+            </div>
+
+            <div class="is-size-5 publication-authors" style="margin-top: 0.5rem;">
+              <span class="author-block"><b>ICML 2026</b></span>
             </div>
 
             <div class="column has-text-centered">
@@ -210,25 +214,22 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Alignment has greatly improved large language models (LLMs)' output quality at the cost of diversity,
-              yielding highly similar outputs across generations. We propose <strong>Base-Aligned Model Collaboration
-                (BACo)</strong>, an inference-time token-level model
-              collaboration framework that dynamically combines a base LLM with its aligned counterpart to optimize
-              diversity and quality.
-              BACo employs routing strategies that determine, at each token, from which
-              model to decode based on next-token prediction uncertainty and predicted contents'
-              semantic role. Prior diversity-promoting methods, such as retraining, prompt
-              engineering, and multi-sampling methods, improve diversity but often degrade
-              quality or require costly decoding or post-training.
-              In contrast, BACo achieves
-              both high diversity and quality post hoc within a single pass, while offering strong
-              controllability. We explore a family of routing strategies across three open-ended
-              generation tasks and 13 metrics covering diversity and quality. BACo consistently
-              surpasses state-of-the-art inference-time baselines. With our best router, BACo
-              achieves a <strong>21.3% joint improvement</strong> in diversity and quality. Human evaluations
-              also mirror these improvements.
-              The results suggest that collaboration between base and aligned models can optimize and control diversity
-              and quality.
+              Alignment has greatly improved large language models (LLMs)' output quality at the cost of
+              diversity, yielding highly similar outputs across generations, especially in open-ended
+              generation tasks. We propose <strong>Base-Aligned Model Collaboration (BACo)</strong>, an
+              inference-time token-level model collaboration framework that dynamically combines a base LLM
+              with its aligned counterpart to optimize diversity and quality. Using uncertainty and
+              content-based signals, BACo employs routing strategies to determine, at each token, which model
+              to decode from. Prior diversity-promoting methods often improve diversity at the expense of
+              quality or require expensive decoding or post-training. In contrast, BACo achieves both high
+              diversity and quality post hoc within a single pass, while offering strong controllability. We
+              introduce a family of effective routing strategies and evaluate them across three open-ended
+              generation tasks with 13 diversity and quality metrics. BACo consistently surpasses
+              state-of-the-art inference-time baselines. With our best router, BACo achieves a
+              <strong>21.3% joint improvement</strong> in diversity and quality, which is further supported by
+              human evaluations. Overall, our results demonstrate that collaboration between base and aligned
+              models provides an effective and controllable mechanism for optimizing the diversity-quality
+              trade-off.
             </p>
           </div>
         </div>
@@ -328,11 +329,13 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{wang2025optimizing,
+      <pre><code>@inproceedings{wang2026optimizing,
   title={Optimizing Diversity and Quality through Base-Aligned Model Collaboration},
   author={Wang, Yichen and Yang, Chenghao and Huang, Tenghao and Chen, Muhao and May, Jonathan and Lee, Mina},
-  journal={arXiv preprint arXiv:2511.05650},
-  year={2025}
+  booktitle={Proceedings of the 43rd International Conference on Machine Learning},
+  series={Proceedings of Machine Learning Research},
+  publisher={PMLR},
+  year={2026}
 }</code></pre>
     </div>
   </section>
